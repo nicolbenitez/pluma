@@ -7,6 +7,7 @@ body {
   background-repeat: repeat;
   color: #4a2c2a;
   text-align: center;
+  overflow-x: hidden;
 }
 
 header {
@@ -17,6 +18,8 @@ header {
   font-size: 2.8em;
   color: #e75480;
   text-shadow: 2px 2px #ffb6c1;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .welcome {
@@ -24,6 +27,7 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
   margin: 20px;
   border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .gallery {
@@ -38,11 +42,12 @@ header {
   width: 250px;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery img:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(231, 84, 128, 0.4);
 }
 
 .contact {
@@ -58,11 +63,12 @@ header {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .btn:hover {
   background-color: #ff8fab;
+  transform: scale(1.05);
 }
 
 footer {
@@ -70,4 +76,24 @@ footer {
   padding: 15px;
   font-size: 0.9em;
   margin-top: 30px;
+}
+
+/* 🌟 Estrellitas animadas */
+.star {
+  position: fixed;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #fff, #ffc0cb);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear;
+  z-index: 0;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
 }
