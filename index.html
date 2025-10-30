@@ -1,65 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pluma — Logo</title>
-
-  <!-- Tipografía elegante -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pluma - Belleza y Cuidado</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="stage">
-    <!-- Decoraciones (flores, corazones, brillos) -->
-    <div class="decorations" aria-hidden="true">
-      <span class="sparkle s1">✦</span>
-      <span class="sparkle s2">✦</span>
-      <span class="heart h1">❤</span>
-      <span class="heart h2">❤</span>
-      <svg class="flower f1" viewBox="0 0 24 24"><path d="M12 2c1 3 4 3 4 6s-3 3-4 6-4 3-4 6 3 3 4 6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
-      <svg class="flower f2" viewBox="0 0 24 24"><path d="M12 2c1 3 4 3 4 6s-3 3-4 6-4 3-4 6 3 3 4 6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
-    </div>
+  <div class="logo-container">
+    <h1 class="logo">
+      Pluma <img src="imagenes/pluma.png" alt="Pluma decorativa" class="pluma-icon">
+    </h1>
+    <p class="mensaje">💋 Gracias por confiar tu belleza a Pluma — donde cada detalle cuenta.</p>
+  </div>
 
-    <!-- Logo centrado -->
-    <div class="logo-card" id="logoCard">
-      <div class="logo-inner">
-        <!-- Pluma SVG a la izquierda -->
-        <div class="feather" aria-hidden="true">
-          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="gradFeather" x1="0" x2="1">
-                <stop offset="0" stop-color="#fff5f9"/>
-                <stop offset="1" stop-color="#ff7eb6"/>
-              </linearGradient>
-              <linearGradient id="gradQuill" x1="0" x2="1">
-                <stop offset="0" stop-color="#fff8ef"/>
-                <stop offset="1" stop-color="#ffd67a"/>
-              </linearGradient>
-            </defs>
-            <path d="M54 6c-8 2-22 10-32 20s-12 24-6 28c6 4 18-2 30-14 10-10 18-24 8-34z"
-                  fill="url(#gradFeather)" stroke="#d47aa0" stroke-width="1.2"/>
-            <path d="M12 48c6-6 18-18 30-30" fill="none" stroke="#fff6fb" stroke-width="1" opacity="0.6"/>
-            <path d="M18 54 L46 60" stroke="url(#gradQuill)" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
-          </svg>
-        </div>
+  <section class="explicacion">
+    <h2>✨ Sobre Nuestro Maquillaje ✨</h2>
+    <p>
+      En <strong>Pluma</strong> creemos que el maquillaje no solo embellece, sino que también refleja tu confianza y estilo.
+      Cada producto que ofrecemos está cuidadosamente seleccionado para realzar tu belleza natural, con fórmulas suaves,
+      colores vibrantes y acabados que te harán brillar en cada momento.
+    </p>
+    <p>
+      💄 Desde bases ligeras hasta labiales atrevidos, queremos acompañarte en cada paso de tu rutina de belleza,
+      inspirándote a expresar lo mejor de ti misma, todos los días.
+    </p>
+  </section>
 
-        <!-- Texto principal -->
-        <div class="text-wrap">
-          <h1 class="brand">Pluma</h1>
-          <p class="tagline">💋 Gracias por confiar tu belleza a Pluma — donde cada detalle cuenta.</p>
-        </div>
-      </div>
-
-      <!-- Botones -->
-      <div class="controls">
-        <a id="igBtn" class="btn ig" href="https://www.instagram.com/nicol_.xf?igsh=MWx2Zzl1dmRoODh0bw==" target="_blank" rel="noopener">Síguenos en Instagram</a>
-        <!-- WhatsApp: ya formateado con código de país (Colombia +57). Si quieres cambiar, edita el href -->
-        <a id="waBtn" class="btn wa" href="https://wa.me/573026334176" target="_blank" rel="noopener">Contáctanos por WhatsApp</a>
-        <button id="downloadBtn" class="btn download">Descargar logo (PNG)</button>
-      </div>
-    </div>
+  <div class="contacto">
+    <a href="https://instagram.com/TU_USUARIO" target="_blank" class="btn">📸 Síguenos en Instagram</a>
+    <a href="https://wa.me/TU_NUMERO" target="_blank" class="btn">💌 Contáctanos por WhatsApp</a>
   </div>
 
   <script src="script.js"></script>
