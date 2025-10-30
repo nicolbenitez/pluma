@@ -1,29 +1,94 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pluma by Dior</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1 class="logo">Pluma</h1>
-    <p class="frase">“La belleza empieza cuando decides ser tú misma.<br>Pluma: el arte de realzar tu belleza natural.”</p>
+/* Fondo y tipografía */
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd6e7, #ffb6c1);
+  overflow: hidden;
+  font-family: "Poppins", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
 
-    <div class="makeup-icons">
-      <img src="images/labial.png" alt="Labial">
-      <img src="images/brocha.png" alt="Brocha">
-      <img src="images/perfume.png" alt="Perfume">
-      <img src="images/sombra.png" alt="Sombra">
-    </div>
+/* Logo */
+.logo {
+  font-family: "Great Vibes", cursive;
+  font-size: 90px;
+  color: #ff1493;
+  text-shadow: 0 0 15px #fff;
+  animation: brillo 3s infinite ease-in-out;
+  margin-top: 20px;
+}
 
-    <div class="contacto">
-      <p>📸 <a href="https://www.instagram.com/nicol_.xf" target="blank">@nicol.xf</a></p>
-      <p>📞 3026434176</p>
-    </div>
-  </div>
+/* Mensaje */
+.mensaje {
+  font-size: 20px;
+  color: #64034b;
+  margin: 20px 20px;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 15px 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #fff;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+/* Contacto */
+.contacto {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #64034b;
+}
+
+.contacto a {
+  color: #d1006a;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contacto a:hover {
+  text-decoration: underline;
+  color: #ff1493;
+}
+
+/* Iconos de maquillaje */
+.iconos-maquillaje {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.iconos-maquillaje img {
+  width: 70px;
+  transition: transform 0.4s ease;
+}
+
+.iconos-maquillaje img:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Estrellitas animadas */
+.estrella {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: parpadeo 2s infinite ease-in-out;
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* Efecto de brillo del logo */
+@keyframes brillo {
+  0%, 100% { text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4; }
+  50% { text-shadow: 0 0 25px #fff, 0 0 40px #ff1493; }
+}
