@@ -1,20 +1,99 @@
-// 🌟 Mensaje de bienvenida
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    alert('💖 Bienvenida a Pluma by Dior 💋 — Gracias por brillar con nosotros ✨');
-  }, 1000);
-});
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ffd6eb, #fff0f6);
+  background-image: url('https://i.pinimg.com/originals/8a/0c/2a/8a0c2a7ef0b68e8b5b49d88e046a49c5.png');
+  background-size: cover;
+  background-repeat: repeat;
+  color: #4a2c2a;
+  text-align: center;
+  overflow-x: hidden;
+}
 
-// 🌸 Efecto de brillo en el logotipo
-const logo = document.querySelector('.logo');
-logo.addEventListener('mouseover', () => {
-  logo.style.textShadow = '0 0 20px #ffb6c1, 0 0 40px #e75480';
-});
-logo.addEventListener('mouseout', () => {
-  logo.style.textShadow = '2px 2px #ffb6c1';
-});
+header {
+  padding: 20px;
+}
 
-// 🌟 Estrellas animadas en el fondo
-const createStar = () => {
-  const star = document.createElement('div');
-  star.classList.add('star
+.logo {
+  font-size: 2.8em;
+  color: #e75480;
+  text-shadow: 2px 2px #ffb6c1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.welcome {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(231, 84, 128, 0.4);
+}
+
+.contact {
+  margin: 40px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  background-color: #e75480;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #ff8fab;
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  font-size: 0.9em;
+  margin-top: 30px;
+}
+
+/* 🌟 Estrellitas animadas */
+.star {
+  position: fixed;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #fff, #ffc0cb);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear;
+  z-index: 0;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
