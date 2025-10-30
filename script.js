@@ -1,40 +1,26 @@
-// Efecto de corazones y brillos flotando
-document.addEventListener("DOMContentLoaded", () => {
-  const cantidad = 15;
-  for (let i = 0; i < cantidad; i++) {
-    const corazon = document.createElement("div");
-    corazon.classList.add("corazon");
-    corazon.style.left = Math.random() * 100 + "vw";
-    corazon.style.animationDuration = 4 + Math.random() * 3 + "s";
-    document.body.appendChild(corazon);
+document.addEventListener('DOMContentLoaded', function() {
+  const select = document.getElementById('phraseSelect');
+  const tagline = document.getElementById('tagline');
+
+  select.addEventListener('change', function() {
+    tagline.textContent = this.value;
+    tagline.animate([
+      { filter: 'brightness(1)', transform: 'translateY(0) scale(1)' },
+      { filter: 'brightness(1.25)', transform: 'translateY(-4px) scale(1.02)' },
+      { filter: 'brightness(1)', transform: 'translateY(0) scale(1)' }
+    ], { duration: 500, easing: 'ease-out' });
+  });
+
+  // Animación de los íconos al hacer clic
+  const svg = document.querySelector('.icon-set');
+  if (svg) {
+    svg.addEventListener('click', () => {
+      svg.animate([
+        { transform: 'rotate(0deg)' },
+        { transform: 'rotate(6deg)' },
+        { transform: 'rotate(-4deg)' },
+        { transform: 'rotate(0deg)' }
+      ], { duration: 700, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    });
   }
 });
-
-// Estilo de corazones dinámico
-const style = document.createElement("style");
-style.innerHTML = `
-  .corazon {
-    position: fixed;
-    bottom: 0;
-    color: pink;
-    font-size: 20px;
-    animation: flotar linear infinite;
-    z-index: 10;
-  }
-  @keyframes flotar {
-    from { transform: translateY(0) rotate(0deg); opacity: 1; }
-    to { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-  }
-`;
-document.head.appendChild(style);
-
-// Crear corazones en movimiento
-setInterval(() => {
-  const corazon = document.createElement("div");
-  corazon.classList.add("corazon");
-  corazon.innerText = "💖";
-  corazon.style.left = Math.random() * 100 + "vw";
-  corazon.style.animationDuration = 4 + Math.random() * 3 + "s";
-  document.body.appendChild(corazon);
-  setTimeout(() => corazon.remove(), 7000);
-}, 800);
