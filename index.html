@@ -2,69 +2,69 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pluma — Logo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pluma — Tienda de Maquillaje</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="canvas">
-    <section class="logo-card">
-      <div class="brand">
-        <!-- SVG: pluma + labial + brocha -->
-        <svg class="icon-set" viewBox="0 0 600 200" aria-hidden="true" role="img">
-          <!-- Pluma -->
-          <g class="feather" transform="translate(20,40) scale(0.9)">
-            <path d="M30 10 C120 0 140 90 80 130 C40 160 5 170 0 170" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M40 24 C120 18 135 76 90 108" fill="none" stroke="#FFD6F0" stroke-width="4" stroke-linecap="round"/>
-          </g>
-
-          <!-- Labial -->
-          <g class="lipstick" transform="translate(220,10) scale(0.9)">
-            <rect x="70" y="70" width="40" height="90" rx="8" fill="#1b0b0b" opacity="0.9"/>
-            <rect x="72" y="72" width="36" height="30" rx="6" fill="#ff6aa6"/>
-            <path d="M90 50 C102 40 118 40 130 50 L124 60 C110 48 98 48 90 60 Z" fill="#ff8fc1"/>
-            <circle cx="100" cy="130" r="2" fill="#fff" opacity="0.6"/>
-          </g>
-
-          <!-- Brocha -->
-          <g class="brush" transform="translate(390,30) scale(0.85)">
-            <rect x="0" y="80" width="18" height="80" rx="6" fill="#3f1b2d"/>
-            <rect x="-8" y="62" width="34" height="24" rx="8" fill="#ffd6e8"/>
-            <path d="M0 62 C18 40 36 40 54 62 C36 44 18 44 0 62 Z" fill="#fff4f8" opacity="0.9"/>
-          </g>
-
-          <!-- Brillos -->
-          <g class="sparkles" transform="translate(480,0)">
-            <polygon points="10,0 13,7 20,10 13,13 10,20 7,13 0,10 7,7" fill="#fff" opacity="0.9"/>
-            <polygon points="-10,30 -7,37 0,40 -7,43 -10,50 -13,43 -20,40 -13,37" fill="#fff" opacity="0.7"/>
-          </g>
+  <main class="card">
+    <header class="brand">
+      <!-- Logo: Pluma + Labial -->
+      <div class="logo" aria-hidden="true">
+        <!-- Pluma -->
+        <svg class="icon feather" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <path d="M54 6c-9 9-28 18-43 33 0 0 5-1 12 2 8 4 19 3 33-7 0 0-3-11-2-28z"
+                fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 52c6-6 22-18 40-30"
+                fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round"/>
         </svg>
 
-        <h1 class="brand-name">Pluma</h1>
+        <!-- Labial -->
+        <svg class="icon lipstick" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect x="26" y="10" width="12" height="20" rx="3" ry="3" fill="#111" />
+          <path d="M26 30v6a6 6 0 0 0 6 6h0a6 6 0 0 0 6-6v-6" fill="#ff6f9c" />
+          <path d="M30 6c4 2 6 4 6 8s-4 6-6 9-6-2-6-6 2-11 6-11z" fill="#ff87b5" />
+        </svg>
       </div>
 
-      <p class="tagline" id="tagline">Tu belleza empieza con un toque de Pluma ✨</p>
+      <h1 class="title">PLUMA</h1>
+      <p class="tagline">Belleza ligera. Maquillaje que vuela contigo.</p>
+    </header>
+
+    <section class="details">
+      <div class="message">
+        <h2>Sobre nuestro maquillaje</h2>
+        <p>Productos veganos y de larga duración pensados para realzar tu belleza natural. Fórmulas suaves con acabados mate y brillo para cada ocasión.</p>
+      </div>
+
+      <div class="to-clients">
+        <h2>Mensaje para nuestros clientes</h2>
+        <p>Gracias por elegir <strong>Pluma</strong>. Tu confianza nos inspira a crear looks únicos — si necesitas asesoría personalizada, estamos para ayudarte.</p>
+      </div>
 
       <div class="contacts">
-        <a class="contact" href="https://www.instagram.com/nicol_.xf?igsh=MWx2Zzl1dmRoODh0bw==" target="_blank" rel="noopener noreferrer">
-          Instagram
-        </a>
-        <a class="contact" href="https://wa.me/573026334176" target="_blank" rel="noopener noreferrer">
-          WhatsApp: +57 302 633 4176
-        </a>
-      </div>
-
-      <div class="options">
-        <label>Opciones de frase:</label>
-        <select id="phraseSelect">
-          <option value="Tu belleza empieza con un toque de Pluma ✨">Tu belleza empieza con un toque de Pluma ✨</option>
-          <option value="Resalta tu brillo único con Pluma 💄">Resalta tu brillo único con Pluma 💄</option>
-          <option value="Maquíllate, siéntete poderosa, sé Pluma 💕">Maquíllate, siéntete poderosa, sé Pluma 💕</option>
-        </select>
+        <h2>Contáctanos</h2>
+        <ul>
+          <li>
+            <a class="contact instagram" href="https://www.instagram.com/nicol_.xf?igsh=MWx2Zzl1dmRoODh0bw==" target="_blank" rel="noopener">
+              Instagram: <span class="handle">@nicol_.xf</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact whatsapp" id="wa-link"
+               href="https://wa.me/573026334176?text=Hola%20Pluma%2C%20quiero%20informaci%C3%B3n"
+               target="_blank" rel="noopener">
+               WhatsApp: <span class="handle">+57 302 633 4176</span>
+            </a>
+            <button id="copy-wa" class="btn small" aria-label="Copiar número de WhatsApp">Copiar</button>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <footer class="credit">Diseño por <strong>Pluma</strong> · Toques glam</footer>
+    <footer class="footer-note">
+      <p>© 2025 Pluma — Tienda de maquillaje. Diseñado con 💋 por Nicol.</p>
+    </footer>
   </main>
 
   <script src="script.js"></script>
