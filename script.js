@@ -1,71 +1,62 @@
-// Mensajes para clientas
-const messages = [
-  "Tu belleza, escrita con cariño ✨",
-  "Siéntete radiante, siempre 💕",
-  "Tu estilo, nuestra inspiración 🌸",
-  "Brilla con cada trazo 💄",
-  "Cada día más hermosa ✨"
-];
+// Element refs
+const downloadBtn = document.getElementById('downloadBtn');
+const logoCard = document.getElementById('logoCard');
 
-const msgEl = document.getElementById("message");
-const changeBtn = document.getElementById("changeBtn");
-const copyBtn = document.getElementById("copyBtn");
-const downloadBtn = document.getElementById("downloadBtn");
-const logoSvg = document.getElementById("logoSvg");
-const igLink = document.getElementById("igLink");
+// Mensaje ya está en el HTML conforme a tu selección.
+// Si quieres cambiarlo dinámicamente desde aquí, puedes hacerlo:
+// document.querySelector('.tagline').textContent = "Nuevo mensaje aquí";
 
-// Cambiar mensaje aleatorio
-changeBtn.addEventListener("click", () => {
-  const next = messages[Math.floor(Math.random() * messages.length)];
-  msgEl.textContent = next;
-});
+// Descargar el área del logo (logoCard) como PNG.
+// Este método convierte el SVG + estilos visibles en una imagen usando canvas.
+// Nota: para incorporar fuentes y estilos complejos, abre la página en un navegador moderno.
+function downloadElementAsPng(element, fileName = 'pluma-logo.png') {
+  // Serialize the element by creating an SVG foreignObject with the element's HTML.
+  const width = element.offsetWidth;
+  const height = element.offsetHeight;
 
-// Copiar mensaje al portapapeles
-copyBtn.addEventListener("click", async () => {
-  try {
-    await navigator.clipboard.writeText(msgEl.textContent);
-    copyBtn.textContent = "¡Copiado!";
-    setTimeout(() => (copyBtn.textContent = "Copiar mensaje"), 1400);
-  } catch (e) {
-    alert("No se pudo copiar. Usa Ctrl/Cmd + C.");
-  }
-});
+  // Inline computed styles for fonts may be necessary to perfectly preserve look.
+  const serialized = `
+  <svg xmlns='http://www.w3.org/2000/svg' width='${width}' height='${height}'>
+    <foreignObject width='100%' height='100%'>
+      ${new XMLSerializer().serializeToString(element)}
+    </foreignObject>
+  </svg>`;
 
-// Descargar SVG como PNG
-function svgToPngDownload(svgEl, fileName = "pluma-logo.png") {
-  const serializer = new XMLSerializer();
-  const source = serializer.serializeToString(svgEl);
-  const svgBlob = new Blob([source], { type: "image/svg+xml;charset=utf-8" });
-  const url = URL.createObjectURL(svgBlob);
-
+  const blob = new Blob([serialized], { type: 'image/svg+xml;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
   const img = new Image();
+
   img.onload = () => {
-    const canvas = document.createElement("canvas");
-    // mejorar resolución multiplicando por 2
-    canvas.width = img.width * 2;
-    canvas.height = img.height * 2;
-    const ctx = canvas.getContext("2d");
-    ctx.scale(2, 2);
-    ctx.fillStyle = "#ffffff";
+    // increase resolution for better quality
+    const scale = 2;
+    const canvas = document.createElement('canvas');
+    canvas.width = img.width * scale;
+    canvas.height = img.height * scale;
+    const ctx = canvas.getContext('2d');
+    ctx.scale(scale, scale);
+    // white background
+    ctx.fillStyle = '#ffffff';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, 0, 0);
     canvas.toBlob((blob) => {
-      const a = document.createElement("a");
+      const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
       a.download = fileName;
       document.body.appendChild(a);
       a.click();
       a.remove();
-    }, "image/png");
+    }, 'image/png');
     URL.revokeObjectURL(url);
   };
-  img.onerror = () => alert("Error al generar la imagen.");
+
+  img.onerror = () => {
+    alert('No fue posible generar la imagen. Prueba en Chrome/Edge/Firefox recientes.');
+    URL.revokeObjectURL(url);
+  };
+
   img.src = url;
 }
 
-downloadBtn.addEventListener("click", () => {
-  svgToPngDownload(logoSvg, "pluma-logo.png");
+downloadBtn.addEventListener('click', () => {
+  downloadElementAsPng(logoCard, 'pluma-logo.png');
 });
-
-// (Opcional) Validaciones o mejoras: si quieres que el botón de Instagram abra un modal o copie tu usuario,
-// se puede añadir aquí. También se podría usar una pequeña galería con lightbox.
