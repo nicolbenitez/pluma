@@ -1,89 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pluma — Boutique de Maquillaje</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pluma by Dior</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="stars" aria-hidden="true"></div>
-  <div class="card" role="main">
-    <header>
-      <div class="logo">
-        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1">
-              <stop offset="0" stop-color="#ffd7e6" />
-              <stop offset="1" stop-color="#ff9ecb" />
-            </linearGradient>
-          </defs>
-          <g transform="translate(10,8)">
-            <path d="M20 60 C40 20, 80 10, 95 30 C110 50, 60 92, 22 86 C26 74, 18 70, 20 60 Z" fill="url(#g1)" stroke="#b34e7a" stroke-width="2"/>
-            <rect x="76" y="16" width="8" height="24" rx="2" transform="rotate(-20 80 28)" fill="#1b1b1f"/>
-            <path d="M72 18 L96 12 L100 24 L78 32 Z" fill="#f2c0d6" transform="rotate(-20 84 24)"/>
-          </g>
-        </svg>
-      </div>
+  <header>
+    <h1 class="logo">✨ Pluma by Dior ✨</h1>
+  </header>
 
-      <div>
-        <h1>Pluma</h1>
-        <div class="tagline">Belleza con delicadeza — productos seleccionados para brillar ✨</div>
-      </div>
+  <section class="welcome">
+    <h2>Bienvenida a Pluma 💋</h2>
+    <p>Donde la elegancia y la belleza se encuentran. Gracias por brillar con nosotros todos los días 🌸</p>
+  </section>
 
-      <div class="actions">
-        <a class="btn" id="whatsappBtn" href="#">WhatsApp</a>
-        <a class="btn" id="instaBtn" href="#">Instagram</a>
-      </div>
-    </header>
+  <section class="gallery">
+    <img src="https://cdn.pixabay.com/photo/2016/11/29/02/34/makeup-1869221_1280.jpg" alt="Maquillaje Dior">
+    <img src="https://cdn.pixabay.com/photo/2017/08/06/11/37/makeup-2593480_1280.jpg" alt="Cosméticos Dior">
+    <img src="https://cdn.pixabay.com/photo/2017/08/07/09/32/perfume-2600965_1280.jpg" alt="Perfume Dior">
+  </section>
 
-    <main>
-      <section>
-        <h2>Nuestros destacados</h2>
-        <div class="gallery">
-          <div class="product" data-title="Iluminador Radiante" data-desc="Polvo iluminador con brillo sutil. Perfecto para un 'glow' natural.">
-            <h3>Iluminador</h3>
-            <p>Brilla con luz propia.</p>
-          </div>
-          <div class="product" data-title="Globos & Celebración" data-desc="Set decorativo para eventos — ideal para fotos y lanzamientos.">
-            <h3>Globos</h3>
-            <p>Ambiente dulce para tus celebraciones.</p>
-          </div>
-          <div class="product" data-title="Base Perfecta" data-desc="Base de cobertura ligera-media con acabado aterciopelado.">
-            <h3>Base</h3>
-            <p>Acabado natural y duradero.</p>
-          </div>
-          <div class="product" data-title="Kit Pluma" data-desc="Combo mini: iluminador + mini base. Perfecto para regalo.">
-            <h3>Kit Pluma</h3>
-            <p>Regala un toque de ternura y brillo.</p>
-          </div>
-        </div>
-      </section>
+  <section class="contact">
+    <h2>💞 Contáctame 💞</h2>
+    <p>Síguenos y contáctanos para más productos exclusivos:</p>
+    <a href="https://www.instagram.com/nicol_.xf" target="_blank" class="btn">🌷 Instagram</a>
+    <a href="https://wa.me/573026334176" target="_blank" class="btn">💬 WhatsApp</a>
+  </section>
 
-      <aside>
-        <strong>Mensaje para nuestras clientas</strong>
-        <p>Querida clienta: en <strong>Pluma</strong> creemos que la belleza es delicada y poderosa a la vez. Cada producto está elegido para que te sientas segura, suave y radiante. Gracias por elegirnos 💖</p>
-
-        <div class="contact">
-          <div class="socials">
-            <a class="btn" id="whatsappContact" href="#">📱 WhatsApp</a>
-            <a class="btn" id="instaContact" href="#">📸 Instagram</a>
-          </div>
-        </div>
-      </aside>
-    </main>
-  </div>
-
-  <div id="modal" class="modal">
-    <div class="panel">
-      <div class="modal-header">
-        <strong id="modalTitle">Producto</strong>
-        <button id="closeModal">✕</button>
-      </div>
-      <div id="modalDesc"></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <footer>
+    <p>© 2025 Pluma by Dior | Creado con 💖 por Nicol Benítez</p>
+  </footer>
 </body>
 </html>
