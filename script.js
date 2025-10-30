@@ -1,5 +1,5 @@
 (function() {
-  // Botón para copiar número de WhatsApp
+  // Botón copiar número WhatsApp
   const copyBtn = document.getElementById('copy-wa');
   const waLink = document.getElementById('wa-link');
   if (copyBtn && waLink) {
@@ -14,7 +14,7 @@
     });
   }
 
-  // Animación del logo al cargar
+  // Animación de entrada del logo
   window.addEventListener('load', () => {
     const logo = document.querySelector('.logo');
     if (logo) {
