@@ -1,34 +1,20 @@
-// Tu número y cuenta:
-const WHATSAPP_NUMBER = "573026334176";
-const INSTAGRAM_URL = "https://www.instagram.com/nicol_.xf";
-
-function whatsappLink(number, text) {
-  const base = "https://wa.me/" + number;
-  const q = text ? "?text=" + encodeURIComponent(text) : "";
-  return base + q;
-}
-
-document.getElementById("whatsappBtn").href = whatsappLink(WHATSAPP_NUMBER, "Hola Pluma! Me gustaría información sobre...");
-document.getElementById("whatsappContact").href = whatsappLink(WHATSAPP_NUMBER, "Hola Pluma!");
-document.getElementById("instaBtn").href = INSTAGRAM_URL;
-document.getElementById("instaContact").href = INSTAGRAM_URL;
-
-// Modal de productos
-const products = document.querySelectorAll(".product");
-const modal = document.getElementById("modal");
-const modalTitle = document.getElementById("modalTitle");
-const modalDesc = document.getElementById("modalDesc");
-const closeModal = document.getElementById("closeModal");
-
-products.forEach(p => {
-  p.addEventListener("click", () => {
-    modalTitle.textContent = p.dataset.title;
-    modalDesc.textContent = p.dataset.desc;
-    modal.classList.add("open");
-  });
+// 🌟 Mensaje de bienvenida
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    alert('💖 Bienvenida a Pluma by Dior 💋 — Gracias por brillar con nosotros ✨');
+  }, 1000);
 });
 
-closeModal.addEventListener("click", () => modal.classList.remove("open"));
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) modal.classList.remove("open");
+// 🌸 Efecto de brillo en el logotipo
+const logo = document.querySelector('.logo');
+logo.addEventListener('mouseover', () => {
+  logo.style.textShadow = '0 0 20px #ffb6c1, 0 0 40px #e75480';
 });
+logo.addEventListener('mouseout', () => {
+  logo.style.textShadow = '2px 2px #ffb6c1';
+});
+
+// 🌟 Estrellas animadas en el fondo
+const createStar = () => {
+  const star = document.createElement('div');
+  star.classList.add('star
