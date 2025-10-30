@@ -1,116 +1,93 @@
-/* Reset */
-* { box-sizing: border-box; margin:0; padding:0; }
-html,body{height:100%}
-
-/* Stage: ocupa toda la pantalla y centra el logo */
-body{
-  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: radial-gradient(1200px 800px at 10% 10%, #fff6fb 0%, transparent 20%),
-              linear-gradient(180deg, #fff0f6 0%, #fff8ef 35%, #fffaf0 65%, #fff9f6 100%);
-  display:flex;align-items:center;justify-content:center;
-  background-color: #fff6f9;
-}
-
-/* Soft pink + gold overlay gradient */
-.stage {
-  width: 100%;
-  min-height: 100vh;
-  display:flex;align-items:center;justify-content:center;
-  background: linear-gradient(135deg, rgba(255,236,241,0.55), rgba(255,245,230,0.35));
-}
-
-/* Logo card centrado */
-.logo-card{
-  width: min(760px, 92vw);
-  max-width:760px;
-  padding: 36px 28px;
-  border-radius: 18px;
-  backdrop-filter: blur(6px);
-  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,250,245,0.55));
-  box-shadow: 0 18px 50px rgba(206,120,160,0.12), inset 0 1px 0 rgba(255,255,255,0.5);
-  position: relative;
-  text-align:center;
-  overflow: visible;
-}
-
-/* Inner layout: feather + text side-by-side centered */
-.logo-inner{
-  display:flex;align-items:center;gap:18px;justify-content:center;
-}
-
-/* Feather size */
-.feather{ width:84px; height:84px; display:flex; align-items:center; justify-content:center; }
-.feather svg{ width:84px; height:84px; }
-
-/* Brand name: elegant cursive + gold accent */
-.brand{
-  font-family: "Great Vibes", cursive;
-  font-size:56px;
-  color:#6b2343;
-  margin:0;
-  letter-spacing:1px;
-  text-shadow: 0 6px 18px rgba(107,35,67,0.08);
-}
-
-/* Tagline/message */
-.tagline{
+body {
+  margin: 0;
   font-family: "Poppins", sans-serif;
-  font-weight:600;
-  margin:6px 0 0 0;
-  color:#8a4667;
-  font-size:15px;
+  background: linear-gradient(135deg, #f9c5d1, #fbd3e9, #fceabb);
+  background-size: 400% 400%;
+  animation: moverFondo 10s ease infinite;
+  color: #4b2e2b;
+  text-align: center;
+  overflow-x: hidden;
 }
 
-/* Buttons */
-.controls{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn{
-  padding:10px 14px;border-radius:12px;border:none;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-.btn:hover{transform:translateY(-4px)}
-.btn.ig{background:#E1306C;color:white}
-.btn.wa{background:#25D366;color:white}
-.btn.download{background:linear-gradient(90deg,#ffd67a,#ff9ccf); color:#4b2b3a; box-shadow: 0 8px 22px rgba(255,150,170,0.12)}
-
-/* Decorations: sparkles, hearts, flowers floating */
-.decorations{position:absolute;pointer-events:none;inset:0}
-.sparkle, .heart, .flower{position:absolute;opacity:0.95;transform-origin:center;}
-
-/* Sparkles */
-.s1{left:14%;top:8%;font-size:18px;color:#fff6e6; animation:twinkle 3s infinite;}
-.s2{right:12%;top:10%;font-size:20px;color:#fff6e6; animation:twinkle 3.6s infinite .3s}
-@keyframes twinkle{
-  0%{opacity:.2; transform:scale(.8)}
-  50%{opacity:1; transform:scale(1.12)}
-  100%{opacity:.2; transform:scale(.8)}
+/* Animación del fondo */
+@keyframes moverFondo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Hearts */
-.heart{color:#ff9ccf;font-size:22px;opacity:.95}
-.h1{left:8%;bottom:18%; animation:floaty 6s ease-in-out infinite}
-.h2{right:6%;bottom:22%; animation:floaty 5.2s ease-in-out infinite .6s}
-
-/* Flowers (simple SVG outline using currentColor) */
-.flower{color:#ffd6ea;width:34px;height:34px}
-.f1{left:22%;top:68%; transform:rotate(-10deg); animation:floatySmall 7s infinite}
-.f2{right:20%;top:68%; transform:rotate(8deg); animation:floatySmall 6.2s infinite .3s}
-
-/* Floating animations */
-@keyframes floaty{
-  0%{transform:translateY(0) rotate(-2deg)}
-  50%{transform:translateY(-12px) rotate(2deg)}
-  100%{transform:translateY(0) rotate(-2deg)}
-}
-@keyframes floatySmall{
-  0%{transform:translateY(0) scale(.98)}
-  50%{transform:translateY(-8px) scale(1.02)}
-  100%{transform:translateY(0) scale(.98)}
+/* Logo */
+.logo-container {
+  margin-top: 80px;
 }
 
-/* Responsive */
-@media (max-width:600px){
-  .brand{font-size:40px}
-  .feather svg{width:64px;height:64px}
-  .logo-card{padding:22px}
-  .tagline{font-size:13px}
+.logo {
+  font-size: 60px;
+  color: #b93b72;
+  font-family: "Dancing Script", cursive;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pluma-icon {
+  width: 70px;
+  height: auto;
+}
+
+/* Mensaje */
+.mensaje {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Sección explicativa */
+.explicacion {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  margin: 40px auto;
+  width: 80%;
+  max-width: 700px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+}
+
+.explicacion h2 {
+  color: #b93b72;
+  font-family: "Dancing Script", cursive;
+}
+
+.explicacion p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Botones */
+.contacto {
+  margin: 30px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  background: #b93b72;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #f77da2;
+  transform: scale(1.05);
+}
+
+/* Animaciones de brillos */
+@keyframes brillo {
+  0% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.5; transform: scale(1); }
 }
