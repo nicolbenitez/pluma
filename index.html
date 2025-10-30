@@ -1,100 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pluma — Tienda de Maquillaje</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pluma — Boutique de Maquillaje</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="wrap">
-    <section class="card">
-      <!-- LOGO PRINCIPAL -->
+  <div class="stars" aria-hidden="true"></div>
+  <div class="card" role="main">
+    <header>
       <div class="logo">
-        <svg class="feather" viewBox="0 0 64 64">
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stop-color="#fff"/>
-              <stop offset="100%" stop-color="#ffe6f0"/>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#ffd7e6" />
+              <stop offset="1" stop-color="#ff9ecb" />
             </linearGradient>
           </defs>
-          <path d="M52 6c-7 3-22 10-33 33-3 7 3 10 7 7 9-6 27-26 29-34 1-6-2-8-3-6z"
-                fill="url(#g)" stroke="#ff7fbf" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M16 40c8-3 25-15 37-28"
-                fill="none" stroke="#ff4fa0" stroke-width="1.6" stroke-linecap="round"/>
-          <circle cx="47" cy="11" r="1.6" fill="#fff" opacity="0.9"/>
+          <g transform="translate(10,8)">
+            <path d="M20 60 C40 20, 80 10, 95 30 C110 50, 60 92, 22 86 C26 74, 18 70, 20 60 Z" fill="url(#g1)" stroke="#b34e7a" stroke-width="2"/>
+            <rect x="76" y="16" width="8" height="24" rx="2" transform="rotate(-20 80 28)" fill="#1b1b1f"/>
+            <path d="M72 18 L96 12 L100 24 L78 32 Z" fill="#f2c0d6" transform="rotate(-20 84 24)"/>
+          </g>
         </svg>
-
-        <div class="brand">
-          <h1>pluma</h1>
-          <p class="tag">Tienda de maquillaje</p>
-        </div>
-
-        <div class="maker">
-          <span>Productos de la marca</span>
-          <strong>Dior</strong>
-        </div>
       </div>
 
-      <!-- IMÁGENES DECORATIVAS -->
-      <div class="images">
-        <img src="iluminador1.png" alt="iluminador Dior" />
-        <img src="gloss2.png" alt="Labial o gloos Dior" />
-        <img src="base3.png" alt="base Dior" /> 
-        <img src=" rubores4.png" alt=" rubores Dior" />
-        <img src=" perfume5.png" alt=" perfume Diofr2/>
+      <div>
+        <h1>Pluma</h1>
+        <div class="tagline">Belleza con delicadeza — productos seleccionados para brillar ✨</div>
       </div>
 
-      <!-- MENSAJE PARA LAS LINDAS -->
-      <p class="message">
-        💕 A todas mis lindas: el maquillaje no tapa tu belleza, ¡la resalta! ✨  
-        Porque brillas por dentro y por fuera 💋
-      </p>
-
-      <!-- PRODUCTOS -->
-      <h2 class="section-title">Nuestros productos</h2>
-      <div class="products">
-        <div class="product">
-          <img src="PON_AQUI_TU_IMAGEN_PRODUCTO_1.png" alt="Base de maquillaje">
-          <p>Base Dior Forever</p>
-        </div>
-        <div class="product">
-          <img src="PON_AQUI_TU_IMAGEN_PRODUCTO_2.png" alt="Labial">
-          <p>Labial Rouge Dior</p>
-        </div>
-        <div class="product">
-          <img src="PON_AQUI_TU_IMAGEN_PRODUCTO_3.png" alt="Sombra de ojos">
-          <p>Paleta de sombras Dior Backstage</p>
-        </div>
-        <div class="product">
-          <img src="PON_AQUI_TU_IMAGEN_PRODUCTO_4.png" alt="Perfume">
-          <p>Perfume Miss Dior</p>
-        </div>
-      </div>
-
-      <!-- DESCRIPCIÓN -->
-      <p class="description">
-        Pluma: maquillaje para realzar tu belleza de forma elegante y natural.  
-        Productos de <strong>Dior</strong> para un toque de lujo y sofisticación.
-      </p>
-
-      <!-- BOTONES DE CONTACTO -->
-      <div class="socials">
-        <a href="https://www.instagram.com/nicol_.xf?igsh=MWx2Zzl1dmRoODh0bw==" target="_blank" class="insta">💖 Instagram</a>
-        <a href="https://wa.me/573026334176" target="_blank" class="whatsapp">💬 WhatsApp</a>
-      </div>
-
-      <!-- BOTONES DE ACCIÓN -->
       <div class="actions">
-        <button id="downloadBtn">Descargar logo (PNG)</button>
-        <button id="toggleStars">Apagar/encender estrellas</button>
+        <a class="btn" id="whatsappBtn" href="#">WhatsApp</a>
+        <a class="btn" id="instaBtn" href="#">Instagram</a>
       </div>
+    </header>
 
-      <p class="disclaimer">
-        *Diseño representativo de tienda que ofrece productos Dior. No es afiliado oficial.
-      </p>
-    </section>
-  </main>
+    <main>
+      <section>
+        <h2>Nuestros destacados</h2>
+        <div class="gallery">
+          <div class="product" data-title="Iluminador Radiante" data-desc="Polvo iluminador con brillo sutil. Perfecto para un 'glow' natural.">
+            <h3>Iluminador</h3>
+            <p>Brilla con luz propia.</p>
+          </div>
+          <div class="product" data-title="Globos & Celebración" data-desc="Set decorativo para eventos — ideal para fotos y lanzamientos.">
+            <h3>Globos</h3>
+            <p>Ambiente dulce para tus celebraciones.</p>
+          </div>
+          <div class="product" data-title="Base Perfecta" data-desc="Base de cobertura ligera-media con acabado aterciopelado.">
+            <h3>Base</h3>
+            <p>Acabado natural y duradero.</p>
+          </div>
+          <div class="product" data-title="Kit Pluma" data-desc="Combo mini: iluminador + mini base. Perfecto para regalo.">
+            <h3>Kit Pluma</h3>
+            <p>Regala un toque de ternura y brillo.</p>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <strong>Mensaje para nuestras clientas</strong>
+        <p>Querida clienta: en <strong>Pluma</strong> creemos que la belleza es delicada y poderosa a la vez. Cada producto está elegido para que te sientas segura, suave y radiante. Gracias por elegirnos 💖</p>
+
+        <div class="contact">
+          <div class="socials">
+            <a class="btn" id="whatsappContact" href="#">📱 WhatsApp</a>
+            <a class="btn" id="instaContact" href="#">📸 Instagram</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="panel">
+      <div class="modal-header">
+        <strong id="modalTitle">Producto</strong>
+        <button id="closeModal">✕</button>
+      </div>
+      <div id="modalDesc"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
