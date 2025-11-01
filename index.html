@@ -3,82 +3,83 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pluma — Tienda de Maquillaje</title>
+  <title>Pluma — Tienda de maquillaje</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="card">
-    <header class="brand">
-      <!-- Logo Pluma + Labial -->
-      <div class="logo" aria-hidden="true">
-        <svg class="icon feather" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <path d="M54 6c-9 9-28 18-43 33 0 0 5-1 12 2 8 4 19 3 33-7 0 0-3-11-2-28z"
-                fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12 52c6-6 22-18 40-30"
-                fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round"/>
-        </svg>
+  <header class="site-header">
+    <div class="logo-wrap">
+      <a href="#" class="logo" aria-label="Pluma - logo">
+        <img src="assets/logo.svg" alt="Logo Pluma" width="84" height="84">
+      </a>
+    </div>
+    <nav class="nav">
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </header>
 
-        <svg class="icon lipstick" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <rect x="26" y="10" width="12" height="20" rx="3" ry="3" fill="#111" />
-          <path d="M26 30v6a6 6 0 0 0 6 6h0a6 6 0 0 0 6-6v-6" fill="#ff6f9c" />
-          <path d="M30 6c4 2 6 4 6 8s-4 6-6 9-6-2-6-6 2-11 6-11z" fill="#ff87b5" />
-        </svg>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Pluma</h1>
+        <p class="hero-sub">Maquillaje íntimo y luminoso — Bases, iluminadores y rubores</p>
+        <div class="cta-row">
+          <a class="btn" href="#productos">Ver productos</a>
+          <a class="btn ghost" href="#contacto">Contáctanos</a>
+        </div>
       </div>
+      <div class="hero-art"></div>
+    </section>
 
-      <h1 class="title">PLUMA</h1>
-      <p class="tagline">Belleza ligera. Maquillaje que vuela contigo.</p>
-    </header>
+    <section id="productos" class="productos">
+      <h2>Nuestros destacados</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="img/base.jpg" alt="Base Pluma">
+          <h3>Base ligera</h3>
+          <p>Acabado natural, cobertura modulable y sensación ligera.</p>
+          <div class="price">$28.000 COP</div>
+          <button class="add">Agregar</button>
+        </article>
 
-    <section class="details">
-      <div class="message">
-        <h2>Sobre nuestro maquillaje</h2>
-        <p>Productos veganos, de alta calidad y larga duración, creados para realzar tu belleza natural. Acabados suaves con el toque perfecto de glamour.</p>
-      </div>
+        <article class="card">
+          <img src="img/iluminador.jpg" alt="Iluminador Pluma">
+          <h3>Iluminador glow</h3>
+          <p>Partículas finas para un brillo elegante y saludable.</p>
+          <div class="price">$22.000 COP</div>
+          <button class="add">Agregar</button>
+        </article>
 
-      <div class="to-clients">
-        <h2>Mensaje para nuestros clientes</h2>
-        <p>Gracias por elegir <strong>Pluma</strong>. Tu confianza nos inspira a crear looks únicos — si necesitas asesoría personalizada, estamos para ayudarte a brillar.</p>
-      </div>
-
-      <div class="contacts">
-        <h2>Contáctanos</h2>
-        <ul>
-          <li>
-            <a class="contact instagram" href="https://www.instagram.com/nicol_.xf?igsh=MWx2Zzl1dmRoODh0bw==" target="_blank" rel="noopener">
-              Instagram: <span class="handle">@nicol_.xf</span>
-            </a>
-          </li>
-          <li>
-            <a class="contact whatsapp" id="wa-link"
-               href="https://wa.me/573026334176?text=Hola%20Pluma%2C%20quiero%20informaci%C3%B3n"
-               target="_blank" rel="noopener">
-               WhatsApp: <span class="handle">+57 302 633 4176</span>
-            </a>
-            <button id="copy-wa" class="btn small" aria-label="Copiar número de WhatsApp">Copiar</button>
-          </li>
-        </ul>
+        <article class="card">
+          <img src="img/rubor.jpg" alt="Rubor Pluma">
+          <h3>Rubor satinado</h3>
+          <p>Textura sedosa para un acabado que dura todo el día.</p>
+          <div class="price">$16.000 COP</div>
+          <button class="add">Agregar</button>
+        </article>
       </div>
     </section>
 
-    <footer class="footer-note">
-      <p>© 2025 Pluma — Tienda de maquillaje. Diseñado con 💋 por Nicol.</p>
-    </footer>
+    <section id="sobre" class="sobre">
+      <h2>Sobre Pluma</h2>
+      <p>Pluma es una marca de maquillaje pensada para realzar la belleza natural con fórmulas ligeras, limpias y colores atemporales. Diseñado en Colombia.</p>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <p>Síguenos en Instagram o envíanos un mensaje por WhatsApp — estaremos felices de ayudarte.</p>
+      <div class="contact-links">
+        <a class="social" href="https://www.instagram.com/nicol_.xf?igsh=MWx2Zzl1dmRoODh0bw==" target="_blank">Instagram</a>
+        <a class="social" href="https://wa.me/573026334176" target="_blank">WhatsApp: +57 302 633 4176</a>
+      </div>
+    </section>
   </main>
 
-  <!-- Decoraciones -->
-  <img src="https://i.imgur.com/qbqkSrL.png" class="deco deco-brush" alt="Brocha de maquillaje decorativa">
-  <img src="https://i.imgur.com/xzKIrWB.png" class="deco deco-lipstick" alt="Labial decorativo">
-  <img src="https://i.imgur.com/4TQ8P9v.png" class="sparkles" alt="Brillos decorativos">
-
-  <!-- Botones flotantes -->
-  <div class="floating-buttons">
-    <a href="https://www.instagram.com/nicol_.xf?igsh=MWx2Zzl1dmRoODh0bw==" target="_blank" class="float-btn insta" aria-label="Instagram">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-    </a>
-    <a href="https://wa.me/573026334176?text=Hola%20Pluma%2C%20quiero%20informaci%C3%B3n" target="_blank" class="float-btn wa" aria-label="WhatsApp">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-    </a>
-  </div>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Pluma — Hecho con ❤️</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
