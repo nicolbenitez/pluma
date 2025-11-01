@@ -24,7 +24,6 @@ body {
   background: linear-gradient(180deg, var(--bg-rose) 0%, #ffeaf2 60%), url('https://i.imgur.com/TYElDaY.jpg');
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
   padding: 2rem;
   overflow-x: hidden;
 }
@@ -135,13 +134,11 @@ body {
 .deco-brush {
   bottom: 40px;
   left: 20px;
-  animation: float 6s ease-in-out infinite;
 }
 
 .deco-lipstick {
   top: 40px;
   right: 30px;
-  animation: float 5s ease-in-out infinite reverse;
 }
 
 .sparkles {
@@ -152,19 +149,40 @@ body {
   height: 100%;
   opacity: 0.4;
   z-index: 0;
-  animation: shimmer 8s infinite linear;
 }
 
-/* Animaciones */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+/* Botones flotantes */
+.floating-buttons {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 100;
 }
 
-@keyframes shimmer {
-  0% { filter: brightness(1) blur(0px); }
-  50% { filter: brightness(1.2) blur(1px); }
-  100% { filter: brightness(1) blur(0px); }
+.float-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--accent-pink);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.float-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+.float-btn img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
 }
 
 /* Responsive */
